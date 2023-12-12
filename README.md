@@ -2,17 +2,15 @@
 
 This task is an Azure Pipeline task that allows you to sign code using Signtool and/or Jarsigner in an Azure Pipeline. This solution is fully containerized, utilizing Docker containers to sign code.
 
-``
-
 ## Setup & usage overview
 
 To use this tool, you will need to spin up a Docker container off of an image that you create. The image will be generated using the provided dockerfile.
 
 In order to use this dockerfile, you must provide a Microsoft Installer (.msi) file of the Venafi Code Signing Clients tool.
 
-Our Docker container is based off of this .NET Framework SDK image: mcr.microsoft.com/dotnet/framework/sdk:4.8.1-windowsservercore-ltsc2022
+Our Docker container is based off of this .NET Framework SDK image: 
 
-![alt text](placeholderImage)
+mcr.microsoft.com/dotnet/framework/sdk:4.8.1-windowsservercore-ltsc2022
 
 ## Compatibility
 
