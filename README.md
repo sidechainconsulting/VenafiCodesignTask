@@ -54,6 +54,7 @@ Jarsigner version
 
 ### Sign with Signtool
 
+```
 - task: venafi-signing-task@0
   inputs:
     signer: 'signtool'
@@ -67,9 +68,25 @@ Jarsigner version
     appendsignature: 'TRUE'
     certAlias: 'venafi_svc'
     subjectName: 'venafi_svc'
+```
 
 ### Sign with Jarsigner
 
+```
+- task: venafi-signing-task@0
+  inputs:
+    signer: 'jarsigner'
+    authurl: $(authurl)
+    hsmurl: $(hsmurl)
+    username: $(username)
+    password: $(password)
+    filesPath: 'c:\<path to directory of JAR files>'
+    timestampserver: 'http://timestamp.digicert.com'
+    timestampalgo: 'SHA256'
+    appendsignature: 'TRUE'
+    certAlias: 'venafi_svc'
+    subjectName: 'venafi_svc'
+```
 
 # Contributing
 
