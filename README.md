@@ -16,7 +16,7 @@ mcr.microsoft.com/dotnet/framework/sdk:4.8.1-windowsservercore-ltsc2022
 
 Stable using Venafi Code Signing Clients version 22.4.0 (x64).
 
-Jarsigner version
+Jarsigner version: jdk-17
 
 ## Flags
 
