@@ -1,0 +1,25 @@
+# Use the .NET Framework SDK base image
+FROM mcr.microsoft.com/dotnet/framework/sdk:4.8.1-windowsservercore-ltsc2022
+
+# Create directories
+RUN mkdir c:\install_files
+
+# Copy the Venafi Code Signing Clients MSI to the install_files directory
+COPY VenafiCodeSigningClients-22.4.0-x64.msi /install_files/
+
+# Copy the Jarsigner MSI to the install_files directory
+COPY jdk-17_windows-x64_bin.msi /install_files/
+
+# Set the working directory for subsequent operations
+WORKDIR /azp
+
+# Copy the start-up script
+COPY start-up.ps1 .
+
+# Local issue, solves temporary resolution issue with cloudshare
+RUN echo 38.87.196.40 tpp.venafidemo.com >> C:\Windows\System32\drivers\etc\hosts
+
+# Run the installation and startup script
+CMD powershell -ExecutionPolicy Bypass -Command "& {Start-Process msiexec -ArgumentList '/i C:\install_files\jdk-17_windows-x64_bin.msi /quiet' -Wait; Start-Process msiexec -ArgumentList '/i C:\install_files\VenafiCodeSigningClients-22.4.0-x64.msi /quiet' -Wait; .\start-up.ps1}"
+#CMD powershell -ExecutionPolicy Bypass -Command "& {Start-Process msiexec -ArgumentList '/i C:\install_files\VenafiCodeSigningClients-22.4.0-x64.msi /quiet' -Wait; .\start-up.ps1}"
+  

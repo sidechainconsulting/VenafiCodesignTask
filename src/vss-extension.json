@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "venafi-signing-task",
+    "name": "Venafi Code Signing",
+    "version": "0.1.10",
+    "publisher": "SidechainSecurity",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "This extension adds a task to perform code signing in Azure build pipelines using Venafi CodeSign Protect.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "icons": {
+        "default": "images/extension-icon.png"        
+    },
+    "files": [
+        {
+            "path": "signing-task"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "venafi-signing-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "signing-task"
+            }
+        }
+    ]
+}
