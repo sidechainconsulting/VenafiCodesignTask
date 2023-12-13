@@ -2,6 +2,8 @@
 
 This task is an Azure Pipeline task that allows you to sign code using Signtool and/or Jarsigner in an Azure Pipeline. This solution is fully containerized, utilizing Docker containers to sign code.
 
+Walkthrough video: https://sidechainsecuritycom.sharepoint.com/:v:/s/Sidechain-Engineering/EXPJ3rN3W9ZHrAXnr_-O4qUBq0vB3V7G-1VRx3wR7f7prg?e=rEEme2
+
 ## Setup & usage overview
 
 To use this tool, you will need to spin up a Docker container off of an image that you create. The image will be generated using the provided dockerfile.
