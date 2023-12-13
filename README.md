@@ -52,11 +52,18 @@ Stable using Jarsigner version: jdk-17
 
 ## Usage
 
-First create an image from the dockerfile provided under docker/dockerfile
+First create an image from the dockerfile provided under docker/dockerfile. Ensure you have all the prerequisite files in the same directory (for Venafi CodeSigning and Jarsigner)
 
 ![Docker Image Build](docs/images/builddockerimage.png)
 
-## Example task
+Configuire your docker-compose file with relevant Azure secrets, AZP_URL and AZP_TOKEN.
+Next, run ``` docker-compose up ``` and ensure that your docker-compose.yaml is pointing to the correct image that you built in the last step. Assuming your azure creds are correct, your docker container should now be looking for jobs
+
+![Docker Image Build](docs/images/dockercomposesetup.png)
+
+Run your pipeline with the variables you want and see your documents be signed!
+
+## Example tasks
 
 
 
