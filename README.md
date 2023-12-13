@@ -20,7 +20,7 @@ https://hub.docker.com/_/microsoft-dotnet-framework-sdk/
 
 Stable using Venafi Code Signing Clients version 22.4.0 (x64).
 
-Jarsigner version: jdk-17
+Stable using Jarsigner version: jdk-17
 
 ## Flags
 
@@ -49,6 +49,12 @@ Jarsigner version: jdk-17
 "certAlias" | certificate alias
 
 "signer" | signer to use
+
+## Usage
+
+First create an image from the dockerfile provided under docker/dockerfile
+
+![Docker Image Build](docs/images/builddockerimage.png)
 
 ## Example task
 
