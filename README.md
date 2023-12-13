@@ -8,9 +8,11 @@ To use this tool, you will need to spin up a Docker container off of an image th
 
 In order to use this dockerfile, you must provide a Microsoft Installer (.msi) file of the Venafi Code Signing Clients tool.
 
-Our Docker container is based off of this .NET Framework SDK image: 
+Our Docker container is based off of this .NET Framework SDK image (4.8.1): 
 
-mcr.microsoft.com/dotnet/framework/sdk:4.8.1-windowsservercore-ltsc2022
+https://hub.docker.com/_/microsoft-dotnet-framework-sdk/
+
+``` mcr.microsoft.com/dotnet/framework/sdk:4.8.1-windowsservercore-ltsc2022 ```
 
 ## Compatibility
 
