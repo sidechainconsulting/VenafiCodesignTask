@@ -16,10 +16,9 @@ WORKDIR /azp
 # Copy the start-up script
 COPY start-up.ps1 .
 
-# Local issue, solves temporary resolution issue with cloudshare
-RUN echo 38.87.196.40 tpp.venafidemo.com >> C:\Windows\System32\drivers\etc\hosts
+# Local issue, solves temporary resolution issue with cloudshare - can keep commented out
+# RUN echo 38.87.196.40 tpp.venafidemo.com >> C:\Windows\System32\drivers\etc\hosts
 
-# Run the installation and startup script
+# Run the installation of Jarsigner and Venafi Code Siging Client and startup script
 CMD powershell -ExecutionPolicy Bypass -Command "& {Start-Process msiexec -ArgumentList '/i C:\install_files\jdk-17_windows-x64_bin.msi /quiet' -Wait; Start-Process msiexec -ArgumentList '/i C:\install_files\VenafiCodeSigningClients-22.4.0-x64.msi /quiet' -Wait; .\start-up.ps1}"
-#CMD powershell -ExecutionPolicy Bypass -Command "& {Start-Process msiexec -ArgumentList '/i C:\install_files\VenafiCodeSigningClients-22.4.0-x64.msi /quiet' -Wait; .\start-up.ps1}"
-  
+ 
