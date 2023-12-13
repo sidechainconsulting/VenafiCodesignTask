@@ -3,7 +3,7 @@ services:
   docker-agent-dev:
     image: "containerdev:latest"
     environment:
-      - AZP_URL=https://dev.azure.com/andrew0566
-      - AZP_TOKEN=wvhlcwexgcixyii3fzsvyzkwfm7ntbzhiyq3kkiikrkcholixavq
+      - AZP_URL=https://dev.azure.com/example
+      - AZP_TOKEN=example
       - AZP_AGENT_NAME=dockerbuildagent
       - AZP_POOL=docker-agent
