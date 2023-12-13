@@ -6,7 +6,9 @@ This task is an Azure Pipeline task that allows you to sign code using Signtool 
 
 To use this tool, you will need to spin up a Docker container off of an image that you create. The image will be generated using the provided dockerfile.
 
-In order to use this dockerfile, you must provide a Microsoft Installer (.msi) file of the Venafi Code Signing Clients tool.
+In order to use this dockerfile, you must provide a Microsoft Installer (.msi) file of the Venafi Code Signing Clients tool, as well as the JDK-17 installer:
+
+https://www.oracle.com/java/technologies/downloads/#java17
 
 Our Docker container is based off of this .NET Framework SDK image (4.8.1): 
 
