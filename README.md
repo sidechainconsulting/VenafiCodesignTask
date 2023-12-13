@@ -24,6 +24,8 @@ Stable using Venafi Code Signing Clients version 22.4.0 (x64).
 
 Stable using Jarsigner version: jdk-17
 
+NOTE: When specifying the path to the directory to sign (in your pipeline), please ensure that you point to a directory, and that every file present in the directory is compatible with your signer of choice. For example, when using Jarsigner, please point to a path containing only JAR files.
+
 ## Flags
 
 "authurl" | authURL for Venafi CodeSign Protect
