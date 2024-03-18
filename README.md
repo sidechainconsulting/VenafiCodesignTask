@@ -115,6 +115,26 @@ Run your pipeline with the variables you want and see your documents be signed!
     subjectName: 'venafi_svc'
 ```
 
+# Resources
+
+Below are some helpful links and resources for developing and maintaining Azure pipelines. I am not the author of these, however they came in use for me and they may for you:
+
+Azure Pipeline:
+
+https://learn.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=java%2Ctfs-2018-2%2Cbrowser
+
+https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops
+
+https://learn.microsoft.com/en-us/azure/app-service/deploy-azure-pipelines?tabs=yaml
+
+https://www.youtube.com/watch?v=4BibQ69MD8c
+
+Docker:
+
+https://learn.microsoft.com/en-us/azure/devops/pipelines/ecosystems/containers/build-image?view=azure-devops
+
+https://learn.microsoft.com/en-us/azure/devops/pipelines/agents/docker?view=azure-devops
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
